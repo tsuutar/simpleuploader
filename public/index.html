@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ファイルアップロード</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto mt-10">
+      <h1 class="text-2xl font-bold text-center mb-6">ファイルアップロード</h1>
+
+      <!-- ドラッグ＆ドロップエリア -->
+      <div
+        id="drop-area"
+        class="border-dashed border-4 border-gray-300 bg-white p-6 text-center rounded-lg cursor-pointer hover:bg-gray-100"
+      >
+        ここにファイルをドラッグ＆ドロップ
+      </div>
+
+      <!-- ファイル選択ボタン -->
+      <input type="file" id="file-input" class="hidden" multiple />
+      <div class="text-center mt-4">
+        <button
+          onclick="uploadFiles()"
+          class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          アップロード
+        </button>
+      </div>
+
+      <!-- アップロード進行状況 -->
+      <div id="progress-container" class="hidden mt-4">
+        <p id="progress-text" class="text-center text-gray-600"></p>
+        <div class="w-full bg-gray-300 rounded-full h-4">
+          <div
+            id="progress-bar"
+            class="bg-blue-500 h-4 rounded-full"
+            style="width: 0%"
+          ></div>
+        </div>
+      </div>
+
+      <!-- アップロード済みファイル一覧 -->
+      <h2 class="text-xl font-bold mt-6 mb-2">アップロード済みファイル</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-md rounded-lg">
+          <thead class="bg-gray-200 text-gray-700">
+            <tr>
+              <th class="py-2 px-4 cursor-pointer" onclick="sortTable(0)">
+                ファイル名 ▼
+              </th>
+              <th class="py-2 px-4 cursor-pointer" onclick="sortTable(1)">
+                アップロード日 ▼
+              </th>
+              <th class="py-2 px-4">操作</th>
+            </tr>
+          </thead>
+          <tbody id="file-list" class="text-gray-700"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

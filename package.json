@@ -1,0 +1,27 @@
+{
+  "name": "uploadapp",
+  "version": "1.0.0",
+  "description": "Simple Uploader",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuutar/simpleuploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tsuutar/simpleuploader/issues"
+  },
+  "homepage": "https://github.com/tsuutar/simpleuploader#readme"
+}

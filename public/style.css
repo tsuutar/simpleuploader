@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#drop-area {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
